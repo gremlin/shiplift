@@ -405,6 +405,7 @@ pub struct Info {
     pub name: String,
     pub operating_system: String,
     // pub RegistryConfig:???
+    pub security_options: Vec<String>,
     pub swap_limit: bool,
     pub system_time: Option<String>,
 }
