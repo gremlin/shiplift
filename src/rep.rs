@@ -282,41 +282,6 @@ pub struct MemoryStats {
     pub usage: u64,
     pub failcnt: Option<u64>,
     pub limit: u64,
-    pub stats: MemoryStat,
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct MemoryStat {
-    pub total_pgmajfault: u64,
-    pub cache: u64,
-    pub mapped_file: u64,
-    pub total_inactive_file: u64,
-    pub pgpgout: u64,
-    pub rss: u64,
-    pub total_mapped_file: u64,
-    pub writeback: u64,
-    pub unevictable: u64,
-    pub pgpgin: u64,
-    pub total_unevictable: u64,
-    pub pgmajfault: u64,
-    pub total_rss: u64,
-    pub total_rss_huge: u64,
-    pub total_writeback: u64,
-    pub total_inactive_anon: u64,
-    pub rss_huge: u64,
-    pub hierarchical_memory_limit: u64,
-    pub hierarchical_memsw_limit: u64,
-    pub total_pgfault: u64,
-    pub total_active_file: u64,
-    pub active_anon: u64,
-    pub total_active_anon: u64,
-    pub total_pgpgout: u64,
-    pub total_cache: u64,
-    pub inactive_anon: u64,
-    pub active_file: u64,
-    pub pgfault: u64,
-    pub inactive_file: u64,
-    pub total_pgpgin: u64,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
