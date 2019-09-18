@@ -311,10 +311,25 @@ pub struct Info {
     pub n_goroutines: u64,
     pub name: String,
     pub operating_system: String,
-    // pub RegistryConfig:???
+    pub registry_config: RegistryConfig,
     pub security_options: Vec<String>,
     pub swap_limit: bool,
     pub system_time: Option<String>,
+}
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+#[serde(rename_all = "PascalCase")]
+pub struct RegistryConfig {
+    #[serde(rename = "InsecureRegistryCIDRs")]
+    pub insecure_registry_cidrs: Vec<String>,
+    pub index_configs: HashMap<String, IndexConfig>,
+}
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+#[serde(rename_all = "PascalCase")]
+pub struct IndexConfig {
+    pub name: String,
+    pub secure: bool,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
