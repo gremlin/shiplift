@@ -158,7 +158,8 @@ pub struct HostConfig {
     pub port_bindings: Option<HashMap<String, Vec<HashMap<String, String>>>>,
     pub privileged: bool,
     pub publish_all_ports: bool,
-    pub readonly_rootfs: Option<bool>, /* pub RestartPolicy: ???
+    pub readonly_rootfs: Option<bool>,
+    pub userns_mode: Option<String>     /* pub RestartPolicy: ???
                                         * pub SecurityOpt: Option<???>,
                                         * pub Ulimits: Option<???>
                                         * pub VolumesFrom: Option<??/> */
